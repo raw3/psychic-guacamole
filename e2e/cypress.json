@@ -1,0 +1,20 @@
+{
+  "screenshotsFolder": "../test-results/regression/cypress/screenshots",
+  "videosFolder": "../test-results/regression/cypress/videos",
+  "videoUploadOnPasses": false,
+  "testFiles": "**/*.feature*",
+  "baseUrl": "http://localhost:4200",
+  "integrationFolder": "cypress",
+  "pluginsFile": "cypress/plugins.ts",
+  "supportFile": false,
+  "fixturesFolder": false,
+  "defaultCommandTimeout": 10000,
+  "pageLoadTimeout": 240000,
+  "reporter": "junit",
+  "reporterOptions": {
+    "mochaFile": "../test-results/regression/cypress/[hash].xml",
+    "toConsole": false
+  },
+  "viewportWidth": 1280,
+  "viewportHeight": 720
+}

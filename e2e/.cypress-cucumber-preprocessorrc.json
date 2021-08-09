@@ -1,0 +1,5 @@
+{
+  "nonGlobalStepDefinitions": true,
+  "commonPath": "cypress/shared",
+  "stepDefinitions": "cypress"
+}

@@ -1,0 +1,15 @@
+{
+  "extends": "../tsconfig",
+  "compilerOptions": {
+    "baseUrl": "../",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "types": ["cypress", "node"],
+    "paths": {
+      "@app/*": [
+        "src/app/*"
+      ]
+    }
+  },
+  "include": ["cypress/**/*.ts"]
+}
