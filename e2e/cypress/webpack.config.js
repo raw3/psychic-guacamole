@@ -1,11 +1,16 @@
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin');
+const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
 
 module.exports = {
   resolve: {
     extensions: ['.ts', '.js'],
-    plugins: [new TsconfigPathsPlugin({ configFile: './tsconfig.json' })],
+    plugins: [new TsconfigPathsPlugin({ configFile: './tsconfig.json' }), new NodePolyfillPlugin()],
+    fallback: {
+      fs: false,
+      child_process: false,
+      readline: false
+    }
   },
-  node: { fs: 'empty', child_process: 'empty', readline: 'empty' },
   module: {
     rules: [
       {
